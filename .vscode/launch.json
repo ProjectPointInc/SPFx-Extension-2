@@ -1,0 +1,60 @@
+{
+  /**
+   * Install Chrome Debugger Extension for Visual Studio Code to debug your components with the
+   * Chrome browser: https://aka.ms/spfx-debugger-extensions
+   */
+  "version": "0.2.0",
+  "configurations": [{
+      "name": "Local workbench",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://localhost:4321/temp/workbench.html",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ]
+    },
+    {
+      "name": "6SC",
+      "type": "chrome",
+      "request": "launch",
+      //"url": "https://6sc.sharepoint.com/sites/TPBC/Lists/Enrollments/EditEnrollment.aspx?ID=71&loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={%223ac8d626-270d-4f5c-8504-4cbacae921f3%22:{%22location%22:%22ClientSideExtension.ApplicationCustomizer%22,%22properties%22:{%22testMessage%22:%22Hello%20as%20property!%22}}}",
+      "url": "https://6sc.sharepoint.com/sites/TPBC/SitePages/Home.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={%223ac8d626-270d-4f5c-8504-4cbacae921f3%22:{%22location%22:%22ClientSideExtension.ApplicationCustomizer%22}}",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ]
+    },
+    {
+      "name": "ProjectPoint",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://projectpoint.sharepoint.com/sites/dev/SitePages/ModernPage.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={%223ac8d626-270d-4f5c-8504-4cbacae921f3%22:{%22location%22:%22ClientSideExtension.ApplicationCustomizer%22}}",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ]
+    }
+  ]
+}

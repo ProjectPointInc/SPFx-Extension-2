@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-extension-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spfxExtension/SpfxExtensionApplicationCustomizer.js",
+          "manifest": "./src/extensions/spfxExtension/SpfxExtensionApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js",
+      "globalName": "jQuery"
+    },
+    "modal": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": ["jquery"]
+    }
+},
+  "localizedResources": {
+    "SpfxExtensionApplicationCustomizerStrings": "lib/extensions/spfxExtension/loc/{locale}.js"
+  }
+}
