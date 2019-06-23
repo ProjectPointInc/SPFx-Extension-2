@@ -4,7 +4,7 @@ import { BaseApplicationCustomizer, PlaceholderName, PlaceholderContent } from '
 
 declare var $: any;
 require('jquery');
-require('modal');
+require('modal');   // TO DO switch to React Modal
 
 import { SPComponentLoader } from '@microsoft/sp-loader';
 
