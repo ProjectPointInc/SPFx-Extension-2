@@ -140,6 +140,9 @@ export default class SpfxExtensionApplicationCustomizer extends BaseApplicationC
   }
 
   public FormCancel(): void {
+    //  add a modal close here so the user isnt left hanging
+    $.modal.defaults = { closeExisting: true };
+    $.modal.close();
     window.document.location.href = this.properties.redirectUrl;
   }
 
